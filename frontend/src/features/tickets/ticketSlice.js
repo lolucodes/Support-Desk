@@ -56,10 +56,10 @@ export const getTickets = createAsyncThunk(
 // Get User Ticket
 export const getTicket = createAsyncThunk(
   'tickets/get',
-  async (tickedId, thunkAPI) => {
+  async (ticketId, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token
-      return await ticketService.getTicket(tickedId, token)
+      return await ticketService.getTicket(ticketId, token)
     } catch (error) {
       const message =
         (error.response &&
@@ -76,10 +76,10 @@ export const getTicket = createAsyncThunk(
 // CloseTicket
 export const closeTicket = createAsyncThunk(
   'tickets/close',
-  async (tickedId, thunkAPI) => {
+  async (ticketId, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token
-      return await ticketService.closeTicket(tickedId, token)
+      return await ticketService.closeTicket(ticketId, token)
     } catch (error) {
       const message =
         (error.response &&
