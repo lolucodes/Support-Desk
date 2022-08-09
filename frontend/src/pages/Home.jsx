@@ -1,5 +1,5 @@
-import {Link} from 'react-router-dom'
-import {FaQuestionCircle, FaTicketAlt} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { FaQuestionCircle, FaTicketAlt } from 'react-icons/fa'
 
 function Home() {
   return (
@@ -10,8 +10,9 @@ function Home() {
       </section>
       
       <Link to='/new-ticket' className='btn btn-reverse btn-block'>
-      <FaQuestionCircle />Create New Ticket
+        <FaQuestionCircle /> Create New Ticket
       </Link>
+      
       <Link to='/tickets' className='btn btn-block'>
       <FaTicketAlt />View My Ticket
       </Link>
